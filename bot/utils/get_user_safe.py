@@ -17,8 +17,8 @@ class TelegramUser(BaseModel):
     language_code: Optional[str] = "ru"
 
     # Взаимодействие с ботом
-    registered_at: datetime
-    last_seen: datetime
+    registered_at: datetime | None = None
+    last_seen: datetime | None = None
     current_state: str = "start"
     locale: str = "ru"
     is_blocked: bool = False
